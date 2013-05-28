@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "-----> Vendoring Apache Httpd"
+
+
+mkdir -p $1/vendor
+
+curl https://raw.github.com/wcdolphin/vulcan-apache/master/apache-bench.tgz --silent -o - | tar -xz -C $1/vendor -f -

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "ApacheBuildpack"
+exit 0
