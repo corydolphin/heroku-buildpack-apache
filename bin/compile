@@ -2,6 +2,18 @@
 # bin/release <build-dir>
 
 
+# Fail fast and fail hard.
+set -eo pipefail
+
+function set-env (){
+  echo "export $1=$2" >> $PROFILE_PATH
+}
+
+# Usage: $ set-default-env key value
+function set-default-env (){
+  echo "export $1=\${$1:-$2}" >> $PROFILE_PATH
+}
+
 indent() {
   sed -u 's/^/       /'
 }
