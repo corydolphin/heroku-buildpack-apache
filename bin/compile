@@ -1,25 +1,11 @@
-#!/usr/bin/env bash
-# bin/release <build-dir>
-
-
-# Fail fast and fail hard.
-set -eo pipefail
-
-function set-env (){
-  echo "export $1=$2" >> $PROFILE_PATH
-}
-
-# Usage: $ set-default-env key value
-function set-default-env (){
-  echo "export $1=\${$1:-$2}" >> $PROFILE_PATH
-}
-
-indent() {
-  sed -u 's/^/       /'
-}
-
 echo "-----> Vendoring Apache Httpd"
 
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+source $BIN_DIR/utils
 
 mkdir -p $1/vendor
 
