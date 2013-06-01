@@ -15,7 +15,6 @@ ROOT_DIR=$(dirname $BIN_DIR)
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-source $BIN_DIR/utils
 
 mkdir -p $1/vendor
 
