@@ -1,10 +1,4 @@
 #!/bin/sh
 
 
-
 echo "---"
-echo "addons:"
-echo "default_process_types:"
-echo "config_vars:"
-echo "	LD_LIBRARY_PATH:  /app/vendor/apache-2.4.4/lib/"
-

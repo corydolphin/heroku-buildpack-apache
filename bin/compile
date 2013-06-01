@@ -19,3 +19,10 @@ CACHE_DIR=$2
 mkdir -p $1/vendor
 
 curl https://raw.github.com/wcdolphin/vulcan-apache/master/apache-bench.tgz --silent -o - | tar -xz -C $1/vendor -f -
+
+PROFILE_PATH="$BUILD_DIR/.profile.d/apache.sh"
+
+mkdir -p "$BUILD_DIR/.profile.d"
+touch $PROFILE_PATH
+echo "export LD_LIBRARY_PATH=/app/vendor/apache-2.4.4/lib/" >> $PROFILE_PATH
+
