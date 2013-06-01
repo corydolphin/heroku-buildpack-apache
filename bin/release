@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-
-
-echo "--- {}"
+echo "---"
+echo "addons:"
+echo "config_vars:"
+echo "  LD_LIBRARY_PATH: /app/vendor/apache-2.4.4/lib/:$LD_LIBRARY_PATH"
+echo "default_process_types:"
