@@ -1,4 +1,8 @@
 #!/bin/sh
 
-
-echo "---"
+cat << EOF
+---
+addons:
+config_vars:
+default_process_types:
+EOF
